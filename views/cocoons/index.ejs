@@ -1,0 +1,25 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="pageHeadDiv">
+  <h2 class="pageHead">Cocoons available</h1>
+</div>
+
+<div class="pageContent">
+  <% for(let cocoon of cocoons) {%>
+    <div class="card" style="width: 80vw; margin-left: 6vw;">
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Date: <%= cocoon.expectedDate %></li>
+        <li class="list-group-item">Location: <%= cocoon.location %></li>
+        <li class="list-group-item">Quantity: <%= cocoon.expectedQuantity %></li>
+        <li class="list-group-item "><a class="linkItem" href="/cocoons/<%= cocoon._id %>">View </a></li>
+      </ul>
+      <div class="card-footer">
+        <a class="footerLink" href="https://api.whatsapp.com/send?phone=91<%= cocoon.contact %>">Contact the owner through whatsapp</a>
+      </div>
+    </div>
+    <div class="emptyDiv">
+    </div>
+    <% } %>
+</div>
+
+ <div class="newDiv"><a href="/cocoons/new" class="newLink">Click to add new</a></div>

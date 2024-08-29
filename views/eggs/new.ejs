@@ -1,0 +1,21 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="pageHeadDiv">
+<h2 class="pageHead">Having a supply!!</h2>
+</div>
+
+<div class="newContent">
+    <form action="/eggs" method="POST" class="newInnerContent">
+        <label for="date" class="form-control">Hatch Date:</label>
+        <input type="date" id="date" name="date" class="form-control"><br>
+        <label for="quantity" class="form-control">Quantity Available(in dfls):</label>
+        <input type="number" id="quantity" name="quantity" min="0" class="form-control"><br>
+        <label for="location" class="form-control">Location:</label>
+        <input type="text" id="location" name="location" class="form-control"><br>
+        <label for="contact" class="form-control">Contact:</label>
+        <input type="text" id="contact" name="contact" class="form-control"><br>
+        <div class="text-center pt-1 mb-5 pb-1">
+            <button class="btn btn-block  mb-3" style="background-color:#6b21a8 ; color: white;">Submit</button>
+          </div>
+    </form>
+</div>

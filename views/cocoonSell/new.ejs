@@ -1,0 +1,19 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="pageHeadDiv">
+    <h2 class="pageHead">New Seller?</h2>
+</div>
+
+<div class="newContent">
+    <form action="/cocoonSell" method="POST" class="newInnerContent">
+        <label for="name" class="form-control">Name:</label>
+        <input type="text" id="name" name="name" class="form-control"><br>
+        <label for="location" class="form-control">Location:</label>
+        <input type="text" id="location" name="location" class="form-control"><br>
+        <label for="contact" class="form-control">Contact:</label>
+        <input type="contact" name="contact" class="form-control"><br>
+        <div class="text-center pt-1 mb-5 pb-1">
+            <button class="btn btn-block  mb-3" style="background-color:#6b21a8 ; color: white;">Submit</button>
+          </div>
+    </form>
+</div>

@@ -1,0 +1,16 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="emptyDiv"></div>
+<% for(let group of groups)  {%> 
+<div class="card" style="width:80vw; margin-left: 10vw;">
+    <div class="card-header">
+        Title: <%= group.title %> 
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">  <a href="/groups/<%= group._id %>" class="linkItem">Enter</a></li>
+    </ul>
+  </div>
+<% } %> 
+
+<div class="emptyDiv"></div>
+<div class="newDiv"><a href="/groups/new" class="newLink">Click to add a new group</a></div>

@@ -1,0 +1,20 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="emptyDiv"></div>
+
+<% for(let discussion of discussions) { %> 
+   <div class="card text-center" style="width: 80vw; margin-left: 10vw;">
+      <div class="card-header">
+         <%= discussion.title %>
+      </div>
+      <div class="card-body">
+        <p class="card-text"><%= discussion.body %></p>
+      </div>
+      <div class="card-footer text-muted">
+         <a class="linkItem" href="/discussions/<%= discussion._id %>">View</a>
+      </div>
+    </div>
+    <div class="emptyDiv"></div>
+<% } %>
+
+<div class="newDiv"><a href="/discussions/new" class="newLink">Click to add a new post</a></div>

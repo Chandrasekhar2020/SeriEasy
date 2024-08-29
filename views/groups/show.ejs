@@ -1,0 +1,24 @@
+<% layout('layouts/boilerplate') %>
+<div class="emptyDiv"></div>
+<% for(let chat of group.chats) { %>
+<div class="card" style="width: 80vw; margin-left: 10vw;">
+    <div class="card-header">
+        <%= chat.author.username %> 
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"> <%= chat.body %> </li>
+    </ul>
+  </div>
+  <div class="emptyDiv"></div>
+  <% } %>  
+
+<div class="mb-3 " style="width: 80vw; margin-left: 10vw;">
+    <form  action="/groups/<%= group._id %>/chats" method="POST">
+    <label for="exampleFormControlInput1" class="form-label">New Message:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="chat[body]">
+    <div class="emptyDiv"></div>
+    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+        <button class="btn btn-primary btn-lg" style="background-color:#6b21a8 ; color: white;">Submit</button>
+      </div>
+    </form>
+  </div>

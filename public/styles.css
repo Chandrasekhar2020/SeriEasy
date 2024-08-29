@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&display=swap');
+
+.quote {
+  height: 35vh;
+  background-color: #e9d5ff;
+  overflow: hidden;
+}
+.head3 {
+  padding-top: 4rem;
+  padding-left: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+.head2 {
+  font-family: 'Lato', sans-serif;
+  padding-left: 3rem;
+  padding-top: 1rem;
+}
+.head4 {
+  margin-left: 32px;
+  padding-top: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+.head5 {
+  color: #6b21a8;
+}
+.head6 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 1rem;
+}
+.head7 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: inline;
+}
+.image1 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.eggsInfo {
+  background-color: #f3e9ff;
+}
+.ruling {
+  color: #7e7b80;
+  margin-left: 32px;
+  margin-right: 2rem;
+}
+.eggsContent {
+  height: 15vh;
+  border: 1px solid #7e7b80;
+  padding: 1rem;
+  margin: 1rem 1rem;
+}
+.eggsText {
+  padding: 1rem;
+  margin: 0;
+}
+.eggsLink {
+  text-decoration: none;
+  color: #6b21a8;
+}
+.eggsTextBottom {
+  padding-top: 0;
+}
+.priceContent {
+  background-color: #e9d5ff;
+  height: 50vh;
+  color: black;
+}
+@media screen and (max-width: 767px) {
+  .priceContent {
+    height: 62vh;
+  }
+}
+.pricesText {
+  color: black;
+}
+.pricesLink {
+  color: #6b21a8;
+  text-decoration: none;
+}
+.priceInnerContent {
+  border: 1px solid #7e7b80;
+  height: 20vh;
+  margin: 1rem 2rem;
+}
+.priceInnerLeft {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sellersContent {
+  background-color: #f3e9ff;
+}
+.sellerInnerContent {
+  margin: 1rem;
+}
+.cocoonsLink {
+  text-decoration: none;
+  color: #6b21a8;
+}
+.cocoonsText {
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 0;
+}
+.contactLink {
+  text-decoration: none;
+  color: #6b21a8;
+}
+.buyersInfo {
+  background-color: #e9d5ff;
+}
+.buyersInnerContent {
+  margin: 1rem;
+}
+
+.newLink {
+  text-decoration: none;
+  color: black;
+}
+.newDiv {
+  text-align: center;
+}
+.pageHead {
+  font-family: 'Merriweather', serif;
+  text-align: center;
+}
+.pageContent {
+  margin-left: 5rem;
+}
+.contentHead
+{
+  font-family: 'Merriweather', serif;
+  margin:1rem;
+}
+.linkItem {
+  text-decoration: none;
+  color: rgb(168, 16, 102);
+}
+.footerLink {
+  text-decoration: none;
+  color: #6b21a8;
+}
+.emptyDiv {
+  height: 1rem;
+}
+.showContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+}
+.deleteBtn {
+  background-color: red;
+  color: white;
+}
+.newContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.newInnerContent {
+  width: 50%;
+}
+.mainUser {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

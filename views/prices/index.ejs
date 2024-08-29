@@ -1,0 +1,78 @@
+<% layout('layouts/boilerplate') %> 
+
+    <div class="contentHeadDiv">
+        <h3 class="contentHead">Kolapur Market</h3>
+      </div>
+            <table class="table table-striped">
+                <tr>
+                    <th>Date</th>
+                    <th>Maximum Price</th>
+                    <th>Minimum Price</th>
+                    <th>Average Price</th>
+                    <th></th>
+                  </tr>
+                <% for(let price of prices) {%> 
+                <% if(price.marketName === 'Kolapur market') {%> 
+                  <tr>
+                    <td><%= price.date %></td>
+                    <td><%= price.maximumPrice %></td>
+                    <td> <%= price.averagePrice %></td>
+                    <td><%= price.minimumPrice %></td>
+                    <td><a class="linkItem" href="/prices/<%= price._id %> ">View</a></td>
+                </tr>
+                <% } %> 
+                <% } %> 
+            </table>
+
+            <div class="contentHeadDiv">
+                <h3 class="contentHead">Hyderabad Market</h3>
+              </div>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Date</th>
+                    <th>Maximum Price</th>
+                    <th>Minimum Price</th>
+                    <th>Average Price</th>
+                    <th></th>
+                  </tr>
+                <% for(let price of prices) {%> 
+                <% if(price.marketName === 'Hyderabad market') {%> 
+                  <tr>
+                    <td><%= price.date %></td>
+                    <td><%= price.maximumPrice %></td>
+                    <td> <%= price.averagePrice %></td>
+                    <td><%= price.minimumPrice %></td>
+                    <td><a class="linkItem" href="/prices/<%= price._id %> ">View</a></td>
+                </tr>
+                <% } %> 
+                <% } %> 
+            </table>
+
+            <div class="contentHeadDiv">
+                <h3 class="contentHead">Jangoan Market</h3>
+              </div>
+
+            <table class="table table-striped">
+                <tr>
+                    <th>Date</th>
+                    <th>Maximum Price</th>
+                    <th>Minimum Price</th>
+                    <th>Average Price</th>
+                    <th></th>
+                  </tr>
+                <% for(let price of prices) {%> 
+                <% if(price.marketName === 'Jangoan market') {%> 
+                  <tr>
+                    <td><%= price.date %></td>
+                    <td><%= price.maximumPrice %></td>
+                    <td> <%= price.averagePrice %></td>
+                    <td><%= price.minimumPrice %></td>
+                    <td><a class="linkItem" href="/prices/<%= price._id %> ">View</a></td>
+                </tr>
+                <% } %> 
+                <% } %> 
+            </table>
+
+
+<div class="newDiv"><a href="/prices/new" class="newLink">Click to add new</a></div>

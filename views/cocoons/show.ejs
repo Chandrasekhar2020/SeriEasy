@@ -1,0 +1,17 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="showContent">
+    <div class="card" style="width: 30rem;">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Date: <%= cocoon.expectedDate %></li>
+                <li class="list-group-item">Location: <%= cocoon.location %></li>
+                <li class="list-group-item">Quantity: <%= cocoon.expectedQuantity %></li>
+                <li class="list-group-item"><a class="linkItem" href="https://api.whatsapp.com/send?phone=91<%= cocoon.contact  %>">Contact the owner through whatsapp</a></li>
+                <li class="list-group-item "><a class="linkItem" href="/cocoons/<%= cocoon._id %>/edit">Edit</a></li>
+        </ul>
+        <div class="card-footer">
+          <form action="/cocoons/<%= cocoon._id %>?_method=DELETE" method="POST">
+            <button class="deleteBtn btn"> Delete</button></form>
+        </div>
+      </div>
+</div>

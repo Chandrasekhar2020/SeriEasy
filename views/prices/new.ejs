@@ -1,0 +1,23 @@
+<% layout('layouts/boilerplate') %> 
+
+<div class="pageHeadDiv">
+    <h2 class="pageHead">Add prices</h2>
+    </div>
+
+<div class="newContent">
+    <form action="/prices" method="POST" class="newInnerContent">
+        <label for="averagePrice" class="form-control">Average Price: </label>
+        <input type="number" name="averagePrice" id="averagePrice" min="0" class="form-control"><br>
+        <label for="minimumPrice" class="form-control">Minimum Price: </label>
+        <input type="number" name="minimumPrice" id="minimumPrice" min="0" class="form-control"><br>
+        <label for="maximumPrice" class="form-control">Maximum Price: </label>
+        <input type="number" name="maximumPrice" id="maximumPrice" min="0" class="form-control"><br>
+        <label for="marketName" class="form-control">Market Name: </label>
+        <input type="text" id="marketName" name="marketName" class="form-control"><br>
+        <label for="date" class="form-control">Date: </label>
+        <input type="date" id="date" name="date" class="form-control"><br>
+        <div class="text-center pt-1 mb-5 pb-1">
+            <button class="btn btn-block  mb-3" style="background-color:#6b21a8 ; color: white;">Submit</button>
+          </div>
+    </form>
+</div>

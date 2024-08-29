@@ -1,0 +1,276 @@
+<% layout('layouts/boilerplate') %> 
+    
+<div class="container-fluid quote">
+  <div class="row">
+    <div class="col-lg-6 col-sm-12">
+    <h3 class="head3">Be the one who makes SILK out of worm!!</h3>
+    <h4 class="head2">With time and patience lets turn mulberry leaf into silk gown...</h4>
+  </div>
+  <div class="col-lg-6 col-sm-12">
+    <!-- <img src="cocoons.jpeg" class="image1 " alt="cocoons" height="250px" width="400px"> -->
+  </div>
+  </div>
+</div>
+
+<div class="eggsInfo container-fluid">
+  <h3 class="head4">Eggs Availability</h3>
+  <hr class="ruling">
+  <div class="row">
+    <div class="col-md-4 col-lg-4 col-sm-6">
+      <div class="eggsContent">
+  <h5>Location:</h5>
+  <p>
+    <% for(let egg of eggs) {%> 
+      <%= egg.location %> 
+      <% break %> 
+    <% } %> 
+  </p>
+</div>
+    </div>
+    <div class="col-md-4 col-sm-6">
+      <div class="eggsContent">
+  <h5>Date:</h5>
+  <p>
+    <% for(let egg of eggs) {%> 
+      <%= egg.date %> 
+      <% break %> 
+    <% } %> 
+  </p>
+</div>
+    </div>
+    <div class="col-md-4 col-lg-4 col-sm-6">
+      <div class="eggsContent">
+  <h5>Quantity:</h5>
+  <p>
+    <% for(let egg of eggs) {%> 
+      <%= egg.quantity %> 
+      <% break %> 
+    <% } %> 
+  </p>
+</div>
+    </div>
+  </div>
+  <p class="eggsText eggsTextTop">
+    If you are willing to buy, <a class="eggsLink" href="/">Click here</a>
+  </p>
+  <p class="eggsText eggsTextBottom">
+    For more details regarding availabililty of eggs, <a class="eggsLink" href="/eggs">Click here</a>
+  </p>
+</div>
+
+  <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner ">
+      <div class="carousel-item active card">
+        <div class="card-img-overlay">
+          <h5 class="head6">
+           <%= prices[0].marketName %> price on <%= prices[0].date %> 
+          </h5>
+          <div class="row">
+            <div class="col-md-6 ">
+              <div class="priceInnerContent priceInnerLeft">
+               <div> <h5 class="head7">Average Price:</h5><span><%= prices[0].averagePrice %></span></div>
+                <div><h5 class="head7">Maximum Price:</h5><span><%= prices[0].maximumPrice %></span></div>
+                <div><h5 class="head7">Minimum Price:</h5><span><%= prices[0].minimumPrice %></span></div>
+                <div><h5 class="head7">Number of lots:</h5><span>5</span></div>
+            </div>
+            </div>
+            <div class="col-md-6">
+              <div class="priceInnerContent">
+                hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="priceContent"></div>
+        
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="head5"><%= prices[0].marketName %> </h5>
+          <p class="pricesText">For detailed analysis, <a href="/prices" class="pricesLink">Click here</a></p>
+        </div>
+      </div>
+      <div class="carousel-item card">
+        <div class="card-img-overlay">
+          <h5 class="head6">
+            <%= prices[1].marketName %> price dated 20th August, 2022
+           </h5>
+          <div class="row">
+            <div class="col-md-6 ">
+              <div class="priceInnerContent priceInnerLeft">
+                <div> <h5 class="head7">Average Price:</h5><span><%= prices[1].averagePrice %></span></div>
+                <div><h5 class="head7">Maximum Price:</h5><span><%= prices[1].averagePrice %></span></div>
+                <div><h5 class="head7">Minimum Price:</h5><span><%= prices[1].averagePrice %></span></div>
+                <div><h5 class="head7">Number of lots:</h5><span>5</span></div>
+            </div>
+            </div>
+            <div class="col-md-6">
+              <div class="priceInnerContent">
+                hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="priceContent">
+        </div>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="head5"><%= prices[1].marketName %></h5>
+          <p class="pricesText">For detailed analysis, <a href="/prices" class="pricesLink">Click here</a></p>
+        </div>
+      </div>
+      <div class="carousel-item card">
+        <div class="card-img-overlay">
+          <h5 class="head6">
+            <%= prices[2].marketName %> price dated 20th August, 2022
+           </h5>
+           <div class="row">
+            <div class="col-md-6">
+              <div class="priceInnerContent priceInnerLeft">
+                <div> <h5 class="head7">Average Price:</h5><span><%= prices[2].averagePrice %></span></div>
+                <div><h5 class="head7">Maximum Price:</h5><span><%= prices[2].maximumPrice %></span></div>
+                <div><h5 class="head7">Minimum Price:</h5><span><%= prices[2].minimumPrice %></span></div>
+                <div><h5 class="head7">Number of lots:</h5><span>5</span></div>
+            </div>
+            </div>
+            <div class="col-md-6 ">
+              <div class="priceInnerContent">
+                hello
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="priceContent"></div>
+        <div class="carousel-caption d-none d-md-block">
+          <h5 class="head5"><%= prices[2].marketName %></h5>
+          <p class="pricesText">For detailed analysis, <a href="/prices" class="pricesLink">Click here</a></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <div class="sellersContent container-fluid">
+<h3 class="head4">Cocoons ready to be processessed</h3>
+<div class="row ">
+  <div class="col-lg-4 col-md-4 col-sm-6">
+    <div class="sellerInnerContent">
+<div class="card" style="width: 18rem;">
+  <img src="cocoons.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title"><%= sellers[0].owner.username %> </h5>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Approximate Date: <%= sellers[0].expectedDate %> </li>
+    <li class="list-group-item">Approximate Qunatity: <%=  sellers[0].expectedQuantity %></li>
+    <li class="list-group-item">Location:  <%=  sellers[0].location %></li>
+  </ul>
+  <div class="card-body">
+    <a href="https://api.whatsapp.com/send?phone=91<%= sellers[0].contact  %>" class="card-link contactLink">Contact</a>
+  </div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6">
+<div class="sellerInnerContent">
+  <div class="card" style="width: 18rem;">
+    <img src="cocoons.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= sellers[1].owner.username %></h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Approximate Date: <%= sellers[1].expectedDate %> </li>
+      <li class="list-group-item">Approximate Qunatity:<%=  sellers[1].expectedQuantity %></li>
+      <li class="list-group-item">Location:  <%=  sellers[1].location %></li>
+    </ul>
+    <div class="card-body">
+      <a href="https://api.whatsapp.com/send?phone=91<%= sellers[1].contact  %>" class="card-link contactLink">Contact</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6">
+  <div class="sellerInnerContent">
+    <div class="card" style="width: 18rem;">
+      <img src="cocoons.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title"><%= sellers[2].owner.username %></h5>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">Approximate Date:  <%= sellers[2].expectedDate %></li>
+        <li class="list-group-item">Approximate Qunatity:<%=  sellers[2].expectedQuantity %></li>
+        <li class="list-group-item">Location:<%=  sellers[2].location %></li>
+      </ul>
+      <div class="card-body">
+        <a href="https://api.whatsapp.com/send?phone=91<%= sellers[2].contact  %>" class="card-link contactLink">Contact</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+  <p class="cocoonsText">For all available cocoons, <a href="/cocoons" class="cocoonsLink">Click here</a></p>
+</div>
+
+<div class="buyersInfo container-fluid">
+  <h3 class="head4">Reelers ready to buy</h3>
+  <div class="row">
+    <div class="col-lg-4 col-md-4 col-sm-6">
+      <div class="buyersInnerContent">
+  <div class="card" style="width: 18rem;">
+    <img src="cocoonst.jpeg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title"><%= cocoonSellers[0].name %> </h5>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Location: <%= cocoonSellers[0].location %></li>
+    </ul>
+    <div class="card-body">
+      <a href="https://api.whatsapp.com/send?phone=91<%= cocoonSellers[0].contact  %>" class="card-link contactLink">Contact</a>
+    </div>
+  </div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6">
+  <div class="buyersInnerContent">
+<div class="card" style="width: 18rem;">
+<img src="cocoonst.jpeg" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title"><%= cocoonSellers[1].name %></h5>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Location: <%= cocoonSellers[1].location %></li>
+</ul>
+<div class="card-body">
+  <a href="https://api.whatsapp.com/send?phone=91<%= cocoonSellers[1].contact  %>" class="card-link contactLink">Contact</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-4 col-sm-6">
+  <div class="buyersInnerContent">
+<div class="card" style="width: 18rem;">
+<img src="cocoonst.jpeg" class="card-img-top" alt="...">
+<div class="card-body">
+  <h5 class="card-title"><%= cocoonSellers[2].name %></h5>
+</div>
+<ul class="list-group list-group-flush">
+  <li class="list-group-item">Location: <%= cocoonSellers[2].location %></li>
+</ul>
+<div class="card-body">
+  <a href="https://api.whatsapp.com/send?phone=91<%= cocoonSellers[2].contact  %>" class="card-link contactLink">Contact</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p class="cocoonsText">For all available reelers, <a href="/" class="cocoonsLink">Click here</a></p>
+</div>

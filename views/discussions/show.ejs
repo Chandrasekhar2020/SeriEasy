@@ -1,0 +1,53 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="emptyDiv"></div>
+
+<div class="card text-center" style="width: 80vw; margin-left: 10vw;">
+    <div class="card-header">
+       <%= discussion.title %>
+    </div>
+    <div class="card-body">
+      <p class="card-text"><%= discussion.body %></p>
+    </div>
+    <div class="card-footer text-muted">
+        ----by <%= discussion.author.username %> 
+    </div>
+  </div>
+  <div class="emptyDiv"></div>
+
+<% for(let reply of discussion.replies) {%>
+    <div class="card">
+        <h5 class="card-header"> <%= reply.author.username %> </h5>
+        <div class="card-body">
+          <h5 class="card-title"><%= reply.body %></h5>
+          <% for (comment of reply.comments ) {%> 
+            <div class="card" style="width: 18rem;">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item"><%= comment.body %> </li>
+                </ul>
+              </div>
+              <div class="emptyDiv"></div>
+            <% } %> 
+            <strong id="reply" class="linkItem" data-note="reply<%= reply.replyNumber %>" style="cursor: pointer;">Comment</strong>
+            <div id="reply<%= reply.replyNumber %>" style="display:none;">
+                <form action="/discussions/<%= discussion._id %>/replies/<%= reply._id %>/comments" method="POST">
+                    <label for="body">Body:</label>
+                    <input type="text" id="body" name="comment[body]">
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+      </div>
+      <div class="emptyDiv"></div>
+<% } %>  
+
+<div class="mb-3 " style="width: 80vw; margin-left: 10vw;">
+    <form  action="/discussions/<%= discussion._id %>/replies" method="POST">
+    <label for="exampleFormControlInput1" class="form-label">New Reply:</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" name="reply[body]">
+    <div class="emptyDiv"></div>
+    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+        <button class="btn btn-primary btn-lg" style="background-color:#6b21a8 ; color: white;">Submit</button>
+      </div>
+    </form>
+  </div>

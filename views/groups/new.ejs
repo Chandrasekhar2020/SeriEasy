@@ -1,0 +1,18 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="pageHeadDiv">
+    <h2 class="pageHead">New Group!!</h2>
+    </div>
+
+<div class="mb-3 " style="width: 80vw; margin-left: 10vw;">
+    <form  action="/groups" method="POST">
+    <label for="title" class="form-label">Title:</label>
+    <input type="text" class="form-control" id="title" name="title">
+    <label for="key" class="form-label">Key:</label>
+    <input type="text" class="form-control" id="key" name="key">
+    <div class="emptyDiv"></div>
+    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+        <button class="btn btn-primary btn-lg" style="background-color:#6b21a8 ; color: white;">Submit</button>
+      </div>
+    </form>
+  </div>
